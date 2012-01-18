@@ -1,4 +1,5 @@
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),jordan)
+#this is actually for the jordan
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),droid2)
 
 LOCAL_PATH:= $(call my-dir)
 

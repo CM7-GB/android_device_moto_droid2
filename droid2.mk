@@ -82,7 +82,10 @@ PRODUCT_PACKAGES += libGLESv2 libEGL libGLESv1_CM
 PRODUCT_PACKAGES += gralloc.default hwcomposer.default
 
 # ICS Camera
-PRODUCT_PACKAGES += Camera overlay.omap3 camera.droid2 libcamera libui
+PRODUCT_PACKAGES += Camera camera.droid2 libcamera libui
+
+#ICS Camera (temp disabled to fix build)
+#PRODUCT_PACKAGES += overlay.omap3
 
 #Common packages (gingerbread/ics)
 PRODUCT_PACKAGES += \
