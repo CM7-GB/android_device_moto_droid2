@@ -13,8 +13,6 @@
 # limitations under the License.
 
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),droid2)
-include $(all-subdir-makefiles)
-
-
+ifeq ($(TARGET_DEVICE),droid2)
+    include $(all-subdir-makefiles)
 endif
