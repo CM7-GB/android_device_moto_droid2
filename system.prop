@@ -60,7 +60,7 @@ ro.usb.use_custom_service=1
 ro.product.use_charge_counter=1
 
 # kcm filename prefix
-ro.sys.keypad_prefix=umts_milestone2-keypad-
+ro.sys.keypad_prefix=umts_droid2-keypad-
 
 # primary keycharmap
 persist.sys.keypad_type=qwerty

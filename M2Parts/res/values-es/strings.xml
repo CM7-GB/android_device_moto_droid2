@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Ajustes Milestone2</string>
+    <string name="app_name">Ajustes Droid2</string>
 
     <string name="charge_led_mode_title">LED de carga USB</string>
     <string name="charge_led_mode_summary">Modificar el comportamiento de los LEDs de notificación mientras carga</string>

@@ -15,7 +15,7 @@
 #
 
 #
-# This is the product configuration for a generic Motorola Milestone 2 (milestone2)
+# This is the product configuration for a generic Motorola Milestone 2 (droid2)
 #
 
 # The gps config appropriate for this device
@@ -24,7 +24,7 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 ## (2) Also get non-open-source files if available
-$(call inherit-product-if-exists, vendor/motorola/milestone2/milestone2-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/droid2/droid2-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -52,7 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.dexopt-data-only=1 \
 	ro.vold.umsdirtyratio=20
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/milestone2/overlay
+DEVICE_PACKAGE_OVERLAYS += device/motorola/droid2/overlay
 
 PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
 # ICS sound
 PRODUCT_PACKAGES += \
 	hcitool hciattach hcidump \
-	libaudioutils audio.a2dp.default audio_policy.milestone2 \
+	libaudioutils audio.a2dp.default audio_policy.droid2 \
 	libaudiohw_legacy audio.primary.omap3
 
 # ICS graphics
@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += libGLESv2 libEGL libGLESv1_CM
 PRODUCT_PACKAGES += gralloc.default hwcomposer.default
 
 # ICS Camera
-PRODUCT_PACKAGES += Camera overlay.omap3 camera.milestone2 libcamera libui
+PRODUCT_PACKAGES += Camera overlay.omap3 camera.droid2 libcamera libui
 
 #Common packages (gingerbread/ics)
 PRODUCT_PACKAGES += \
@@ -110,8 +110,8 @@ PRODUCT_PACKAGES += \
 	libVendor_ti_omx \
 	libLCML \
 	libOMX_Core \
-	sensors.milestone2 \
-	lights.milestone2 \
+	sensors.droid2 \
+	lights.droid2 \
 	libfnc \
 	iwmulticall \
 	hostap \
@@ -151,25 +151,25 @@ PRODUCT_PACKAGES += DSPManager libcyanogen-dsp
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-	device/motorola/milestone2/vold.fstab:system/etc/vold.fstab
+	device/motorola/droid2/vold.fstab:system/etc/vold.fstab
 
 # copy all vendor (motorola) kernel modules to system/lib/modules
-PRODUCT_COPY_FILES += $(shell test -d vendor/motorola/milestone2/lib/modules &&  \
-	find vendor/motorola/milestone2/lib/modules -name '*.ko' \
+PRODUCT_COPY_FILES += $(shell test -d vendor/motorola/droid2/lib/modules &&  \
+	find vendor/motorola/droid2/lib/modules -name '*.ko' \
 	-printf '%p:system/lib/modules/%f ')
 
 # copy all others kernel modules under the "modules" directory to system/lib/modules
-PRODUCT_COPY_FILES += $(shell test -d device/motorola/milestone2/modules && \
-	find device/motorola/milestone2/modules -name '*.ko' \
+PRODUCT_COPY_FILES += $(shell test -d device/motorola/droid2/modules && \
+	find device/motorola/droid2/modules -name '*.ko' \
 	-printf '%p:system/lib/modules/%f ')
 
 # Prebuilt boot.img
-LOCAL_KERNEL := device/motorola/milestone2/kernel
+LOCAL_KERNEL := device/motorola/droid2/kernel
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
 
 # Blobs
-$(call inherit-product, device/motorola/milestone2/milestone2-blobs.mk)
+$(call inherit-product, device/motorola/droid2/droid2-blobs.mk)
 
 # Live wallpaper packages
 PRODUCT_PACKAGES += \
@@ -196,6 +196,6 @@ $(call inherit-product, build/target/product/full_base.mk)
 # Should be after the full_base include, which loads languages_full
 PRODUCT_LOCALES += hdpi
 
-PRODUCT_NAME := full_milestone2
+PRODUCT_NAME := full_droid2
 PRODUCT_DEVICE := A953
     

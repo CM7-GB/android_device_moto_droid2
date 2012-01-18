@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/motorola/milestone2/full_milestone2.mk)
+$(call inherit-product, device/motorola/droid2/full_droid2.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -22,16 +22,16 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
-PRODUCT_NAME := cm_milestone2
+PRODUCT_NAME := cm_droid2
 PRODUCT_BRAND := motorola
-PRODUCT_DEVICE := milestone2
+PRODUCT_DEVICE := droid2
 PRODUCT_MODEL := MotoA953
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_SBF := 4.1-22
 PRODUCT_SFX := MILS2_U6
 
 # Release name and versioning
-PRODUCT_RELEASE_NAME := Milestone2
+PRODUCT_RELEASE_NAME := Droid2
 
 UTC_DATE := $(shell date +%s)
 DATE     := $(shell date +%Y%m%d)
@@ -40,10 +40,10 @@ PRODUCT_BUILD_PROP_OVERRIDES := \
 BUILD_ID=MILS2_U6_4.1-22 \
 BUILD_DISPLAY_ID="MILS2_U6_4.1-22" \
 PRODUCT_NAME=${PRODUCT_MODEL}_${PRODUCT_SFX} \
-TARGET_DEVICE=milestone2 \
-BUILD_FINGERPRINT=motorola/RTGB/umts_milestone2:2.3.4/MILS2_U6_4.1-22/1317097892:user/release-keys \
+TARGET_DEVICE=droid2 \
+BUILD_FINGERPRINT=motorola/RTGB/umts_droid2:2.3.4/MILS2_U6_4.1-22/1317097892:user/release-keys \
 PRODUCT_BRAND=MOTO \
-PRIVATE_BUILD_DESC="umts_milestone2-user 2.3.4 MILS2_U6_4.1-22 1317097892 release-keys" \
+PRIVATE_BUILD_DESC="umts_droid2-user 2.3.4 MILS2_U6_4.1-22 1317097892 release-keys" \
 BUILD_NUMBER=${DATE} \
 BUILD_VERSION_TAGS=release-keys \
 TARGET_BUILD_TYPE=user \

@@ -1,4 +1,4 @@
-CyanogenMod 9 for Motorola Milestone2 (Android 4.0.3 AOSP)
+CyanogenMod 9 for Motorola Droid2 (Android 4.0.3 AOSP)
 
 
 Download:
@@ -18,6 +18,6 @@ Build:
 rm -rf out/target
 
 source build/envsetup.sh
-brunch milestone2 -j`sysctl -an hw.logicalcpu`
+brunch droid2 -j`sysctl -an hw.logicalcpu`
 
 Use the signed zip to update with Second Init recovery, or CM bootmenu recovery, not the ota package

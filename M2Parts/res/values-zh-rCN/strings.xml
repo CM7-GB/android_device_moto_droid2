@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Milestone2设置</string>
+    <string name="app_name">Droid2设置</string>
 
     <string name="charge_led_mode_title">充电指示灯设置</string>
     <string name="charge_led_mode_summary">调整充电时LED指示灯的显示模式</string>

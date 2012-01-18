@@ -4,7 +4,7 @@
 # cyanogen / CyanogenDefy
 #
 
-echo "MILESTONE2 SQUISHER:"
+echo "DROID2 SQUISHER:"
 echo "================"
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
@@ -38,7 +38,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/device/motorola/milestone2/releasetools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/device/motorola/droid2/releasetools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
@@ -89,9 +89,9 @@ cd $REPACK/ota/system/framework
 )
 
 # Include device specific script
-if [ -f $ANDROID_BUILD_TOP/device/motorola/milestone2/releasetools/squisher.sh ]; then
+if [ -f $ANDROID_BUILD_TOP/device/motorola/droid2/releasetools/squisher.sh ]; then
         echo "squisher.sh..."
-        . $ANDROID_BUILD_TOP/device/motorola/milestone2/releasetools/squisher.sh
+        . $ANDROID_BUILD_TOP/device/motorola/droid2/releasetools/squisher.sh
 fi
 
 if [ "$1" != "fast" ]; then
@@ -178,10 +178,10 @@ if [ -z "$CM_NIGHTLY" ]; then
 	: ${MODVERSION:=nightly}
 	OUTFILE=$OUT/update-cm-$MODVERSION-signed-$CM_VARIANT.zip
 	REALDATE=`date +%y%m%d`
-	OUTFILE=$OUT/CM9-ICS-MR1-$REALDATE-milestone2-$CM_VARIANT.zip
+	OUTFILE=$OUT/CM9-ICS-MR1-$REALDATE-droid2-$CM_VARIANT.zip
 else
 	OUTFILE=$OUT/update-squished.zip
-	if [ "$TARGET_PRODUCT" = "cm_milestone2" ]; then
+	if [ "$TARGET_PRODUCT" = "cm_droid2" ]; then
 		REALDATE=`sed -n -r 's/ro.build.version.incremental=//p' $REPACK/ota/system/build.prop`
 		MODVERSION=`sed -n -e'/ro\.modversion/s/^.*CyanogenMod-//p' $REPACK/ota/system/build.prop`
 		MODVERSION=`echo $MODVERSION | sed -r 's/[0-9]{8}/'$REALDATE'/'`

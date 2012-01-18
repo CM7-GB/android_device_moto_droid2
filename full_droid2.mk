@@ -36,13 +36,13 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
-$(call inherit-product, device/motorola/milestone2/milestone2.mk)
+$(call inherit-product, device/motorola/droid2/droid2.mk)
 $(call inherit-product-if-exists, vendor/ti/proprietary/omap3/ti-omap3-vendor.mk)
 # Also get non-open-source files if available
-$(call inherit-product-if-exists, vendor/motorola/milestone2/milestone2-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/droid2/droid2-vendor.mk)
 
-PRODUCT_NAME := full_milestone2
-PRODUCT_DEVICE := milestone2
+PRODUCT_NAME := full_droid2
+PRODUCT_DEVICE := droid2
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Milestone2
+PRODUCT_MODEL := Droid2
 PRODUCT_MANUFACTURER := motorola

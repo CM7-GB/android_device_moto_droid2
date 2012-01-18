@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Definições do Milestone2</string>
+    <string name="app_name">Definições do Droid2</string>
 
     <string name="charge_led_mode_title">Modo LED carregamento</string>
     <string name="charge_led_mode_summary">Ajustar o comportamento da LED de notificação durante o carregamento</string>

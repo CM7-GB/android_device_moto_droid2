@@ -1,4 +1,4 @@
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),milestone2)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),droid2)
 
 LOCAL_PATH:= $(call my-dir)
 
@@ -9,7 +9,7 @@ LOCAL_SHARED_LIBRARIES:= libc libcutils libutils libmedia
 LOCAL_STATIC_LIBRARIES := libmedia_helper
 LOCAL_WHOLE_STATIC_LIBRARIES:= libaudiopolicy_legacy
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-LOCAL_MODULE:= audio_policy.milestone2
+LOCAL_MODULE:= audio_policy.droid2
 LOCAL_MODULE_TAGS := optional
 
 ifeq ($(BOARD_HAVE_BLUETOOTH),true)

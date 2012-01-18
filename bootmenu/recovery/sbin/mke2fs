@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-# Motorola Milestone2 CWM3 Recovery Only..
+# Motorola Droid2 CWM3 Recovery Only..
 # 2011/05/15 replace mke2fs
 
 echo "****************************************"

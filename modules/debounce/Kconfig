@@ -1,4 +1,4 @@
-config MILESTONE2_DEBOUNCE
-        tristate "Milestone2 keyboard debounce fix"
+config DROID2_DEBOUNCE
+        tristate "Droid2 keyboard debounce fix"
         default m
 

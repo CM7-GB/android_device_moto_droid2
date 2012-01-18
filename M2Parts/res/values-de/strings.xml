@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Milestone2-Einstellungen</string>
+    <string name="app_name">Droid2-Einstellungen</string>
 
     <string name="general_settings_title">Allgemeine Einstellungen</string>
     <string name="charge_led_mode_title">Lade-LED-Modus</string>
