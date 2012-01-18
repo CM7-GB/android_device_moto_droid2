@@ -45,7 +45,7 @@ int UsbController::enableRNDIS(bool enable) {
     char buffer[128];
 
     snprintf(buffer, sizeof(buffer),
-             "/system/bin/am broadcast -a com.motorola.intent.action.USB_TETHERING_TOGGLED --ei state %d",
+             "/system/bin/am broadcast -a com.moto.intent.action.USB_TETHERING_TOGGLED --ei state %d",
              enable ? 1 : 0);
     system(buffer);
     return 0;

@@ -38,7 +38,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/device/motorola/droid2/releasetools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/device/moto/droid2/releasetools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
@@ -89,9 +89,9 @@ cd $REPACK/ota/system/framework
 )
 
 # Include device specific script
-if [ -f $ANDROID_BUILD_TOP/device/motorola/droid2/releasetools/squisher.sh ]; then
+if [ -f $ANDROID_BUILD_TOP/device/moto/droid2/releasetools/squisher.sh ]; then
         echo "squisher.sh..."
-        . $ANDROID_BUILD_TOP/device/motorola/droid2/releasetools/squisher.sh
+        . $ANDROID_BUILD_TOP/device/moto/droid2/releasetools/squisher.sh
 fi
 
 if [ "$1" != "fast" ]; then

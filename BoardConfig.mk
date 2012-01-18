@@ -62,9 +62,9 @@ WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/fw_tiwlan_ap.bin"
 WPA_SUPPL_APPROX_USE_RSSI   := true
 
 BOARD_USE_YUV422I_DEFAULT_COLORFORMAT := true
-BOARD_EGL_CFG := device/motorola/droid2/egl.cfg
+BOARD_EGL_CFG := device/moto/droid2/egl.cfg
 DEFAULT_FB_NUM := 0
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/motorola/droid2/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/moto/droid2/UsbController.cpp
 BOARD_HAVE_BLUETOOTH := true
 BOARD_MASS_STORAGE_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
@@ -92,7 +92,7 @@ BOARD_USES_BOOTMENU := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/droid2/recovery_ui.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/moto/droid2/recovery_ui.c
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_RECOVERY_IGNORE_BOOTABLES := true
 BOARD_HAS_SMALL_RECOVERY := true
@@ -115,9 +115,9 @@ BOARD_NEVER_UMOUNT_SYSTEM := true
 #TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_generic
 
 # Override cyanogen squisher to customize our update zip package
-TARGET_CUSTOM_RELEASETOOL := ./device/motorola/droid2/releasetools/pre_squisher
+TARGET_CUSTOM_RELEASETOOL := ./device/moto/droid2/releasetools/pre_squisher
 
-# Droid2 need 2nd-init binary from motorola common
+# Droid2 need 2nd-init binary from moto common
 TARGET_NEEDS_MOTOROLA_HIJACK := true
 
 BOARD_USE_CID_ROTATE_34 := true
@@ -132,7 +132,7 @@ COMMON_GLOBAL_CFLAGS += -DMISSING_EGL_EXTERNAL_IMAGE -DMISSING_EGL_PIXEL_FORMAT_
 
 
 # CM9
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/droid2/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/moto/droid2/recovery_keys.c
 
 #ENABLE_SENSORS_COMPAT := true
 TARGET_PROXIMITY_SENSOR_LIMIT := 0x1F

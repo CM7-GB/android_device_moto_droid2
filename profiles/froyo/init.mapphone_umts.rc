@@ -298,7 +298,7 @@ service nvm-daemon /system/bin/nvm_daemon
     group radio
 
 # start commdrv pds script
-service start_commdrv /system/bin/sh /system/etc/motorola/comm_drv/commdrv_fs.sh
+service start_commdrv /system/bin/sh /system/etc/moto/comm_drv/commdrv_fs.sh
     class pre-zygote_services
     oneshot
     user radio

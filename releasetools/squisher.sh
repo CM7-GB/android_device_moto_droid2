@@ -2,8 +2,8 @@
 # It is the final build step (after OTA package)
 
 DEVICE_OUT=$ANDROID_BUILD_TOP/out/target/product/droid2
-DEVICE_TOP=$ANDROID_BUILD_TOP/device/motorola/droid2
-VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/droid2
+DEVICE_TOP=$ANDROID_BUILD_TOP/device/moto/droid2
+VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/moto/droid2
 
 
 # Delete unwanted apps

@@ -275,7 +275,7 @@ service nvm-daemon /system/bin/nvm_daemon
     class main
     user root
     group radio
-service start_commdrv /system/bin/sh /system/etc/motorola/comm_drv/commdrv_fs.sh
+service start_commdrv /system/bin/sh /system/etc/moto/comm_drv/commdrv_fs.sh
     class main
     oneshot
     user radio
@@ -355,7 +355,7 @@ service locDrv /system/bin/brcm_guci_drv -config /system/etc/gpsconfig.xml
     user radio
     group radio inet sdcard_rw
 
-service motolocation /system/bin/sh /system/bin/am startservice -n com.motorola.android.location/com.motorola.android.locationproxy.LocationProxyService
+service motolocation /system/bin/sh /system/bin/am startservice -n com.moto.android.location/com.motorola.android.locationproxy.LocationProxyService
     class late_start
     disabled
     oneshot

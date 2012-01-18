@@ -12,7 +12,7 @@
 	</PreferenceScreen>
 	<PreferenceScreen android:title="@string/audio_effects">
 		<intent android:action="android.intent.action.MAIN"
-			android:targetPackage="com.motorola.android.AudioEffectSettings"
-			android:targetClass="com.motorola.android.AudioEffectSettings.DeviceListActivity" />
+			android:targetPackage="com.moto.android.AudioEffectSettings"
+			android:targetClass="com.moto.android.AudioEffectSettings.DeviceListActivity" />
 	</PreferenceScreen>
 </PreferenceScreen>
