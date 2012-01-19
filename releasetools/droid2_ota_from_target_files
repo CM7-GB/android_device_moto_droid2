@@ -348,12 +348,6 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("port by: JBirdVegas")
   script.Print(" ")
 
-#  if not OPTIONS.omit_prereq:
-#    ts = GetBuildProp("ro.build.date.utc", input_zip)
-#    script.AssertOlderBuild(ts)
-
-#  AppendAssertions(script, input_zip)
-#  device_specific.FullOTA_Assertions()
   if OPTIONS.backuptool:
     script.RunBackup("backup")
 
@@ -364,13 +358,24 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   CopyUtilityFiles(input_zip, output_zip)
 
+  script.Print(" Formatting /system... ")
   script.RunFormatAndTuneSystem()
-  script.Mount("/system")
-  script.UnpackPackageDir("system", "/system")
 
+  script.Print("  ")
+  script.Print(" Mounting /system... ")
+  script.Mount("/system")
+
+  script.Print("  ")
+  script.Print(" Installing /system... ")
+  script.UnpackPackageDir("system", "/system")
   symlinks = CopySystemFiles(input_zip, output_zip)
+
+  script.Print("  ")
+  script.Print(" Creating Symlinks... ")
   script.MakeSymlinks(symlinks)
 
+  script.Print("  ")
+  script.Print(" Setting Permissions... ")
   Item.GetMetadata(input_zip)
   Item.Get("system").SetPermissions(script)
 
@@ -381,13 +386,13 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.RunBackup("restore")
 
   script.RunChkKineto()
-
   script.RunVerifyCachePartitionSize()
 
+  script.ShowProgress(0.2, 10)
+  script.Print("  ")
+  script.Print(" Finishing Installation... ")
   script.Mount("/data")
   script.RunFinalReleaseUtils()
-
-  script.ShowProgress(0.2, 10)
 
   script.ShowProgress(0.1, 0)
   device_specific.FullOTA_InstallEnd()

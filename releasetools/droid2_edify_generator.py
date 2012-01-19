@@ -183,7 +183,7 @@ class EdifyGenerator(object):
     if fstab:
       p = fstab[mount_point]
       self.script.append('mount("%s", "%s", "%s", "%s");' %
-                         ("ext3", common.PARTITION_TYPES["ext3"],
+                         (p.fs_type, common.PARTITION_TYPES[p.fs_type],
                           p.device, p.mount_point))
       self.mounts.add(p.mount_point)
     else:
