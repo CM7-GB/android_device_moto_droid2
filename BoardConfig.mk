@@ -114,8 +114,10 @@ BOARD_NEVER_UMOUNT_SYSTEM := true
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_generic
 #TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_generic
 
-# Override cyanogen squisher to customize our update zip package
-TARGET_CUSTOM_RELEASETOOL := ./device/moto/droid2/releasetools/pre_squisher
+# OTA Packaging
+TARGET_PROVIDES_RELEASETOOLS := true
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/moto/droid2/releasetools/droid2_ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := device/moto/droid2/releasetools/droid2_img_from_target_files
 
 # Droid2 need 2nd-init binary from moto common
 TARGET_NEEDS_MOTOROLA_HIJACK := true

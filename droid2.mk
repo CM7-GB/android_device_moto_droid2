@@ -15,13 +15,19 @@
 #
 
 #
-# This is the product configuration for a generic Motorola Droid2 (A955)
+# This is the product configuration for Motorola Droid2 (A955)
 #
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
+PRODUCT_COPY_FILES += \
+    device/moto/droid2/init_maps/init.rc:root/init.rc \
+    device/moto/droid2/init_maps/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
+    device/moto/droid2/init_maps/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
+    device/moto/droid2/init_maps/init.mapphone_cdma.usb.rc:root/init.mapphone_cdma.usb.rc \
+    device/moto/droid2/init_maps/ueventd.mapphone_cdma.rc:root/ueventd.mapphone_cdma.rc
 
 ## (2) Also get non-open-source files if available
 $(call inherit-product-if-exists, vendor/moto/droid2/droid2-vendor.mk)
@@ -43,7 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.google.locationfeatures=1 \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
-	ro.url.safetylegal=http://www.moto.com/staticfiles/Support/legal/?model=A953 \
+	ro.url.safetylegal=http://www.moto.com/staticfiles/Support/legal/?model=A955 \
 	ro.media.dec.jpeg.memcap=20000000 \
 	ro.media.dec.aud.wma.enabled=1 \
 	ro.media.dec.vid.wmv.enabled=1 \
@@ -51,6 +57,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.kernel.android.checkjni=0 \
 	dalvik.vm.dexopt-data-only=1 \
 	ro.vold.umsdirtyratio=20
+
+# Droid2 fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES := BUILD_ID=VZW \
+        BUILD_DISPLAY_ID=GRH78C \
+        PRODUCT_NAME=droid2_vzw \
+        TARGET_DEVICE=cdma_droid2 \
+        BUILD_FINGERPRINT=verizon/droid2_vzw/cdma_droid2:2.3.3/STAB/110317:user/release-keys \
+        PRODUCT_BRAND=verizon \
+        PRIVATE_BUILD_DESC="cdma_droid2-user 2.3.3 STAB 110317 release-keys" \
+        BUILD_NUMBER=2.3.20 \
+        BUILD_UTC_DATE=1284778494 \
+        TARGET_BUILD_TYPE=user \
+        BUILD_VERSION_TAGS=release-keys \
+        USER=dbretzm1
 
 DEVICE_PACKAGE_OVERLAYS += device/moto/droid2/overlay
 

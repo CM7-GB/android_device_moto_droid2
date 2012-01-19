@@ -25,7 +25,7 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 PRODUCT_NAME := cm_droid2
 PRODUCT_BRAND := moto
 PRODUCT_DEVICE := droid2
-PRODUCT_MODEL := MotoA953
+PRODUCT_MODEL := MotoA955
 PRODUCT_MANUFACTURER := moto
 PRODUCT_SBF := 4.1-22
 PRODUCT_SFX := MILS2_U6
@@ -35,18 +35,3 @@ PRODUCT_RELEASE_NAME := Droid2
 
 UTC_DATE := $(shell date +%s)
 DATE     := $(shell date +%Y%m%d)
-
-PRODUCT_BUILD_PROP_OVERRIDES := \
-BUILD_ID=MILS2_U6_4.1-22 \
-BUILD_DISPLAY_ID="MILS2_U6_4.1-22" \
-PRODUCT_NAME=${PRODUCT_MODEL}_${PRODUCT_SFX} \
-TARGET_DEVICE=droid2 \
-BUILD_FINGERPRINT=moto/RTGB/umts_droid2:2.3.4/MILS2_U6_4.1-22/1317097892:user/release-keys \
-PRODUCT_BRAND=MOTO \
-PRIVATE_BUILD_DESC="umts_droid2-user 2.3.4 MILS2_U6_4.1-22 1317097892 release-keys" \
-BUILD_NUMBER=${DATE} \
-BUILD_VERSION_TAGS=release-keys \
-TARGET_BUILD_TYPE=user \
-USER=kxcr46
-
-
