@@ -93,7 +93,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	hcitool hciattach hcidump \
 	libaudioutils audio.a2dp.default audio_policy.droid2 \
-	libaudiohw_legacy audio.primary.omap3
+	libaudiohw_legacy 
+        #audio.primary.omap3
 
 # ICS graphics
 PRODUCT_PACKAGES += libGLESv2 libEGL libGLESv1_CM
