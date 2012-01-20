@@ -220,6 +220,8 @@ echo
 # Build date and current time:
 cat $OUT/system/build.prop | grep ro.build.date=
 ls -l $OUTFILE
+export $OUTFILE
+echo "Your package is in the variable OUTFILE: $OUTFILE"
 echo
 )
 
