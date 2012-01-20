@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Pre-Squish a CM otapackage for distribution
-# cyanogen / Milestone2
+# cyanogen / Milestone2 / Droid2
 #
 
 echo "US package:"
@@ -9,5 +9,3 @@ CM_VARIANT=us
 if [ -f $ANDROID_BUILD_TOP/device/moto/droid2/releasetools/squisher ]; then
         . $ANDROID_BUILD_TOP/device/moto/droid2/releasetools/squisher
 fi
-
-exit 0

@@ -115,7 +115,7 @@ BOARD_NEVER_UMOUNT_SYSTEM := true
 #TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_generic
 
 # OTA Packaging
-TARGET_CUSTOM_RELEASETOOL := ./device/motorola/milestone2/releasetools/pre_squisher
+TARGET_CUSTOM_RELEASETOOL := ./device/moto/droid2/releasetools/pre_squisher
 
 # Droid2 need 2nd-init binary from moto common
 TARGET_NEEDS_MOTOROLA_HIJACK := true
